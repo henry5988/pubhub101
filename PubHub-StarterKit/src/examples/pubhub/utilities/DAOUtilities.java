@@ -12,15 +12,15 @@ import examples.pubhub.dao.BookDAOImpl;
  */
 public class DAOUtilities {
 
-	private static final String CONNECTION_USERNAME = "postgres";
-	private static final String CONNECTION_PASSWORD = "password";
-	private static final String URL = "jdbc:postgresql://localhost:5432/PubHub";
+	private static final String CONNECTION_USERNAME = "hechang";
+	private static final String CONNECTION_PASSWORD = "Riekon4life";
+	private static final String URL = "jdbc:mysql://localhost:5432/PubHub";
 	private static Connection connection;
 	
 	public static synchronized Connection getConnection() throws SQLException {
 		if (connection == null) {
 			try {
-				Class.forName("org.postgresql.Driver");
+				Class.forName("org.mysql.Driver");
 			} catch (ClassNotFoundException e) {
 				System.out.println("Could not register driver!");
 				e.printStackTrace();
